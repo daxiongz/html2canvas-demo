@@ -31,9 +31,9 @@
         #content{
             position: relative;
             margin:auto;
-						margin-top:50px;
+			margin-top:50px;
             width:588px;
-            height:449px;
+            height:849px;
             box-sizing: border-box;
             overflow:hidden;
         }
@@ -103,7 +103,6 @@
             </div>
         </div>
         <button id="change-style">圆角透明</button>
-        <button id="change-pos">局部遮盖</button>
         <button id="save-local">保存到本地</button>
         <a id="dl-hidden" style="display:none;"></a>
     </body>
@@ -190,21 +189,6 @@
 								$(".letter-bg").attr("style","border-radius:0;");
 								$("#change-style").text("圆角透明");
 								curStyle=0;
-						}
-				})
-				var cusPos=0;
-				$("#change-pos").click(function(e){
-						takeScreenshot();
-						if(cusPos==0){
-								$("#content").attr("style","height:449px;");
-								$(".letter-content").attr("style","top:-140px;");
-								$("#change-pos").text("普通");
-								cusPos=1;
-						}else{
-								$("#content").attr("style","height:849px;");
-								$(".letter-content").attr("style","top:0;");
-								$("#change-pos").text("局部遮盖");
-								cusPos=0;
 						}
 				})
 				$("#save-local").click(function(e){
