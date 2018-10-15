@@ -150,7 +150,7 @@
             return new Blob([u8arr], { type: mime })
         }
 
-        function downloadBase64(dataUrl, filename = '合成图.png') {
+        function downloadBase64(dataUrl, filename) {
             var imageFile, href
             // const downloadLink = document.createElement('a')
             var downloadLink = document.getElementById('dl-hidden')
@@ -192,7 +192,7 @@
 						}
 				})
 				$("#save-local").click(function(e){
-						downloadBase64(IMAGE_URL)
+						downloadBase64(IMAGE_URL, '合成图.png')
 				})
     }
 </script>
