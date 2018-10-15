@@ -103,7 +103,7 @@
             z-index: 10002;
 						width:5.88rem;
             height:8.49rem;
-            opacity:0;
+            opacity:1.0;
         }
         .letter-title{
             position: absolute;
@@ -161,8 +161,6 @@
             canvas.height = height * scale; //定义canvas高度 *缩放
             canvas.getContext("2d").scale(scale,scale); //获取context,设置scale
 
-            // var rect = shareContent.getBoundingClientRect();//获取元素相对于视察的偏移量
-            // canvas.getContext("2d").translate(-rect.left,-rect.top);//设置context位置，值为相对于视窗的偏移量负值，让图片复位
             var opts = {
                 scale:scale, // 添加的scale 参数
                 canvas:canvas, //自定义 canvas
