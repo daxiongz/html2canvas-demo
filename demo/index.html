@@ -151,16 +151,16 @@
         }
 
         function downloadBase64(dataUrl, filename = '合成图.png') {
-            let imageFile, href
+            var imageFile, href
             // const downloadLink = document.createElement('a')
-            const downloadLink = document.getElementById('dl-hidden')
+            var downloadLink = document.getElementById('dl-hidden')
             try {
                 if (window.navigator.msSaveOrOpenBlob) {
                     // if browser is IE
                     navigator.msSaveBlob(dataURLtoBlob(dataUrl), filename)
                 } else {
-                    const blob = dataURLtoBlob(dataUrl)
-                    const href = window.URL.createObjectURL(blob)
+                    var blob = dataURLtoBlob(dataUrl)
+                    var href = window.URL.createObjectURL(blob)
                     downloadLink.download = filename
                     downloadLink.href = href
                     downloadLink.click()
